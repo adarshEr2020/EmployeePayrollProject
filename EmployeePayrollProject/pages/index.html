@@ -19,14 +19,19 @@
                 <span class="emp-text emp-payroll">PAYROLL</span>
             </div>
         </header>
-        
+        <!-- employee payroll form -->
         <div class="form-content">
             <form class="form" action="#" onsubmit="sav();return false">
                 <div class="form-head">Employee Payroll form</div>
+
+                <!-- form content-->
+                  <!-- name -->
                 <div class="row-content">
                     <label class="label text" for="name">Name</label>
                     <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
                 </div>
+                
+                <!-- profile image -->
                 <div class="row-content">
                     <label class="label text" for="profile"> Profile image</label>
                     <div class="profile-radio-content">
@@ -49,6 +54,7 @@
                     </div>
                 </div>
 
+                <!-- gender -->
                 <div class="row-content">
                     <label class="label text" for="gender">Gender</label>
                     <div>
@@ -59,6 +65,7 @@
                     </div>
                 </div>
 
+                <!-- deparment -->
                 <div class="row-content">
                     <label class="label text" for="department">Derpartment</label>
                     <div>
@@ -78,12 +85,15 @@
                         <label class="text" for="others">Others</label>
                     </div>
                 </div>
+
+                <!-- choose salary -->
                 <div class="row-content">
                     <label class="label text" for="salary">Choose your salary:</label> 
-                     <input class="input" type="range" name="salary" id="salary" man="30000" max="50000" step="100" value="40000">
+                     <input class="input" type="range" name="salary" id="salary" min="30000" max="50000" step="100" value="40000">
                         <output class="salary-output text" for="salary">40000</output>                    
                 </div>
 
+                <!-- choose start date -->
                 <div class="row-content">
                     <label class="label text" for="startDate">Start date</label> 
                     <div>
@@ -142,10 +152,25 @@
                            <option value="2017">2017</option>
                            <option value="2016">2016</option>
                        </select>
-                    </div>      
-                             
+                    </div>           
+                </div>
+
+                <!-- notes -->
+                <div class="row-content">
+                    <label class="lebel text" for="notes">Notes</label>
+                    <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px"></textarea>
+                </div>
+
+                <!-- cancel and submit button -->
+                <div class="buttonParent">
+                    <a href="" class="resetButton button cancelbutton">Cencel</a>
+                    <div class="submit-reset">
+                        <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                        <button type="reset" class="resetButton button">Reset</button>
+                    </div>
                 </div>
             </form>
         </div>
+        <script src="../js/validate.js">js</script>
     </body>
 </html>
